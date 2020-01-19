@@ -2,6 +2,9 @@ import QtQuick 2.0
 
 Rectangle {
     id: root
+
+    property string displayText: ""
+
     color: "lightgreen"
 
     border.color: "black"
@@ -13,7 +16,7 @@ Rectangle {
         id: _firstText
         anchors.centerIn: root
 
-        text: "1"
+        text: root.displayText
         font.pointSize: Math.min(root.width, root.height) / 3
         font.bold: true
     }
