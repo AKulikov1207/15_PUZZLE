@@ -21,6 +21,12 @@ GridView {
                 anchors.fill: _backgroundDelegate
                 anchors.margins: 5
                 displayText: display
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: {
+                        root.model.move(index);
+                    }
+                }
             }
     }
 }
